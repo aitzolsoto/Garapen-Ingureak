@@ -1,4 +1,10 @@
 from csv import reader
+from datetime import date
+
+with open('employee.csv') as csvList:
+    csv_reader = reader(csvList)
+    listaCsv = list(csv_reader)
+    print(listaCsv)
 
 def langileaBilatuId():
     idLangilea = input("Sartu langilearen ID-a: ")
@@ -55,12 +61,41 @@ def soldatarenAraberaOrdenatu():
     for i in range(1,len(listaCsv)):
         print(listaCsv[i])
 
-with open('employee.csv') as csvList:
-    csv_reader = reader(csvList)
-    listaCsv = list(csv_reader)
-    print(listaCsv)
+def adinaKalkulatu():
+    langilea = input("Sartu langile baten ID-a: ")
+    data = listaCsv[int(langilea)][10]
+    urtea = data[0:4]
+    hilabetea = data[5:7]
+    eguna = data[8:10]
+
+    urtebetetzea = date(int(urtea),int(hilabetea),int(eguna))
+    today = date.today()
+
+    age = today.year - urtebetetzea.year
+    if today.month < urtebetetzea.month:
+        age -= 1
+    elif today.month == urtebetetzea.month and today.day < urtebetetzea.day:
+        age -= 1
+    print("Adina: " + str(age))
+
+def abizenarenAraberaOrdenatu():
+    for i in range(1,len(listaCsv)):
+        for j in range(0,len(listaCsv)-1):
+            if listaCsv[j+1][8] < listaCsv[j][8]:
+                aux = listaCsv[j+1]
+                listaCsv[j+1] = listaCsv[j]
+                listaCsv[j] = aux
+
+    for i in range(1,len(listaCsv)):
+        print(listaCsv[i])
+
+def langilearenIzenaAldatu():
+    langilea = input("Sartu langilearen ID-a: ")
+    izenBerria = input("Sartu langilearen izen berria: ")
+    listaCsv[int(langilea)][7] = izenBerria
+
 aukera = 0
-while(int(aukera) != 9):
+while(int(aukera) != 12):
     print("")
     print("---------------------")
     print("MENUA")
@@ -69,11 +104,14 @@ while(int(aukera) != 9):
     print("2-Izenaren bidez bilatu")
     print("3-Soldataren bidez bilatu(x soldata baino gehiago irabazten dutenak)")
     print("4-Herriaren bidez bilatu")
-    print("5-Adinaren bidez bilatu(x urte baino gehiago dutenak")
+    print("5-Adinaren bidez bilatu(x urte baino gehiago dutenak)")
     print("6-Soldata altuena duen langilea ikusi")
     print("7-Soldata igo")
     print("8-Soldataren arabera ordenatu")
-    print("9-Irten")
+    print("9-Langile baten adina kalkulatu")
+    print("10-Abizenaren arabera ordenatu")
+    print("11-Langilearen izena aldatu")
+    print("12-Irten")
     aukera = input("Sartu zenbaki bat: ")
 
     if int(aukera) == 1:
@@ -92,3 +130,9 @@ while(int(aukera) != 9):
         soldataIgo()
     elif int(aukera) == 8:
         soldatarenAraberaOrdenatu()
+    elif int(aukera) == 9:
+        adinaKalkulatu()
+    elif int(aukera) == 10:
+        abizenarenAraberaOrdenatu()
+    elif int(aukera) == 11:
+        langilearenIzenaAldatu()
