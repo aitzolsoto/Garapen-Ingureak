@@ -1,3 +1,4 @@
+##1.ariketa
 def multiploak():
 	lista5 = []
 	lista7 = []
@@ -13,6 +14,7 @@ def multiploak():
 	print("7ren multiploak: ")
 	print(lista7)
 
+##2.ariketa
 def celsiusFahrenheit():
 	print("1.Celsiusetik Fahrenheitera")
 	print("2.Fahrenheitik celsiusera")
@@ -27,7 +29,7 @@ def celsiusFahrenheit():
 		celsius = ((int(fahrenheit) - 32) / 9) * 5
 		print(fahrenheit + " F " + str(round(celsius)) + " C dira")
 
-
+#3.ariketa
 def asteriskoakInprimatu():
 	zenbakia = input("Sartu zenbaki bat: ")
 
@@ -42,6 +44,7 @@ def asteriskoakInprimatu():
 				print("* ", end='')
 		print()
 
+##4.ariketa
 def zerrendakoBikoitiak():
 	zerrenda = (1, 2, 3, 4, 5, 6, 7, 8, 9)
 	bakoitiak = 0
@@ -54,6 +57,7 @@ def zerrendakoBikoitiak():
 	print("Zenbaki bikotiti kopurua: " + str(bikoitiak))
 	print("Zenbaki bakoiti kopurua: " + str(bakoitiak))
 
+#5.ariketa
 def fizzbuzz():
 	for i in range(0,51):
 		if i % 3 == 0 and i % 5 == 0:
@@ -65,7 +69,7 @@ def fizzbuzz():
 		else:
 			print(str(i))
 
-
+#6.ariketa
 def letrakDigituakKontatu():
 	letrak = 0
 	digituak = 0
@@ -83,6 +87,7 @@ def letrakDigituakKontatu():
 	print("Digituak: " + str(digituak))
 	print("Letrak: " + str(letrak))
 
+#6.ariketa
 def digituKopurua():
 	letrak = 0
 	digituak = 0
@@ -95,6 +100,7 @@ def digituKopurua():
 	print("Letrak: " + str(letrak))
 	print("Digituak: " + str(digituak))
 
+#7.ariketa
 def aLetraInprimatu():
 	for i in range(0,7):
 		if i == 0:
@@ -104,6 +110,7 @@ def aLetraInprimatu():
 		else:
 			print("*   *")
 
+#8.ariketa
 def kontsonanteaDa():
 	hizkia = input("Idatzi alfabetoko letra bat: ")
 	if hizkia[0].lower() == "a" or hizkia[0].lower() == 'e' or hizkia[0].lower() == 'i' or hizkia[0].lower() == 'o' or hizkia[0].lower() == 'u':
@@ -111,6 +118,7 @@ def kontsonanteaDa():
 	else:
 		print(hizkia[0] + " kontsonantea da")
 
+#9.ariketa
 def urtaroa():
 	hilabetea = input("Sartu hilabete bat: ")
 	eguna = input("Sartu hilabeteko eguna: ")
@@ -123,18 +131,21 @@ def urtaroa():
 	elif (hilabetea.lower() == "abendua" and int(eguna) >= 21 and int(eguna) <= 31) or (hilabetea.lower() == "urtarrila" and int(eguna) >= 1 and int(eguna) <= 31) or (hilabetea.lower() == "otsaila" and int(eguna) >= 1 and int(eguna) <= 28) or (hilabetea.lower() == "martxoa" and int(eguna) < 20 and int(eguna) <= 31):
 		print("Urtaroa negua da")
 
+#10.ariketa
 def biderketaTaula():
 	zenbakia = input("Sartu zenbaki bat: ")
 	for i in range(1,11):
 		emaitza = int(zenbakia) * i
 		print(zenbakia + " X " + str(i) + " = " + str(emaitza))
 
+#11.ariketa
 def zenbakienBukleak():
 	for i in range(1,10):
 		for j in range(0,i):
 			print(str(i), end="")
 		print("")
 
+#12.ariketa
 import random
 def zenbakiaAsmatu():
 	asmatzekoZenbakia = random.randint(1,9)
@@ -147,11 +158,13 @@ def zenbakiaAsmatu():
 		else:
 			print("Saiatu berriro")
 
+#13.ariketa
 def esaldiaAlderantziz():
 	esaldia = input("Sartu esaldi bat: ")
 	for i in range(len(esaldia)-1,-1,-1):
 		print(esaldia[i], end="")
 
+#14.ariketa
 def digituBakoitiak():
 	for i in range(100,401):
 		bakoitia = True
@@ -162,7 +175,7 @@ def digituBakoitiak():
 		if bakoitia:
 			print(str(i) + ",",end = "")
 
-
+#15.ariketa
 def batazBestekoa():
 	z1 = input("Sartu lehenengo zenbakia: ")
 	z2 = input("Sartu bigarren zenbakia: ")
@@ -171,6 +184,7 @@ def batazBestekoa():
 	emaitza = (int(z1) + int(z2) + int(z3)) / 3
 	print("Bataz bestekoa: " + str(emaitza))
 
+#16.ariketa
 def listarenBatuketa():
 	zenbakia = "0"
 	lista1 = []
@@ -183,6 +197,7 @@ def listarenBatuketa():
 		emaitza += i
 	print("Emaitza: " + str(emaitza))
 
+#17.ariketa
 def listarenBiderketa():
 	zenbakia = "0"
 	lista1 = []
@@ -195,6 +210,7 @@ def listarenBiderketa():
 		emaitza *= i
 	print("Emaitza: " + str(emaitza))
 
+#18.ariketa
 def zenbakiHandiena():
 	zenbakia = "0"
 	lista1 = []
@@ -208,6 +224,7 @@ def zenbakiHandiena():
 			zenbakiHandiena = i
 	print("Listako zenbaki handiena: " + str(zenbakiHandiena))
 
+#19.ariketa
 def zenbakiTxikiena():
 	zenbakia = "0"
 	lista1 = []
@@ -221,7 +238,8 @@ def zenbakiTxikiena():
 			zenbakiTxikiena = i
 	print("Listako zenbaki txikiena: " + str(zenbakiTxikiena))
 
-def zenbakiErrepikatuak():
+#20.ariketa
+def zenbakiErrepikatuak(): ##Sin acabar
 	zenbakia = "0"
 	lista1 = []
 
@@ -236,4 +254,89 @@ def zenbakiErrepikatuak():
 	print("Lista zenbakiak ezabatu ondoren")
 	print(lista1)
 
-zenbakiErrepikatuak()
+#21.ariketa
+def zerrendaHutsik():
+	zenbakia = "0"
+	lista1 = []
+
+	while int(zenbakia) != -1:
+		zenbakia = input("Sartu zenbaki bat(-1 amaitzeko): ")
+		if int(zenbakia) != -1:
+			lista1.append(int(zenbakia))
+
+	if len(lista1) == 0:
+		print("Lista hutsik dago")
+	else:
+		print("Lista ez dago hutsik: " + str(lista1))
+
+#22.ariketa
+def zerrendaKopiatu():
+	zenbakia = "0"
+	lista1 = []
+	while int(zenbakia) != -1:
+		zenbakia = input("Sartu zenbaki bat(-1 amaitzeko): ")
+		if int(zenbakia) != -1:
+			lista1.append(int(zenbakia))
+	lista2 = lista1
+	print("Lista: " + str(lista1))
+	print("Listaren kopia: " + str(lista2))
+
+#23.ariketa
+def zerrendakoPosizioaIrakurri():
+	zenbakia = "0"
+	lista1 = []
+	while int(zenbakia) != -1:
+		zenbakia = input("Sartu zenbaki bat: ")
+		if int(zenbakia) != -1:
+			lista1.append(zenbakia)
+
+	posizioa = input("Sartu listako posizio bat: ")
+	if int(posizioa) <= len(lista1):
+		print(lista1[int(posizioa) - 1])
+	else:
+		print("Ez dago zenbakirik posizio horretan")
+
+#24.ariketa
+def zerrendakoIndex():
+	izena = ""
+	lista1 = []
+	while izena != "-1":
+		izena = input("Sartu izen bat(-1 irtetzeko): ")
+		if izena != "-1":
+			lista1.append(izena)
+
+	listakoIzena = input("Sartu listako izen bat bere index-a ikusteko: ")
+	print(listakoIzena + " izenaren index-a: " + str(lista1.index(listakoIzena)))
+
+#25.ariketa
+def ausazkoZenbakia():
+	zenbakia = "0"
+	lista1 = []
+	while int(zenbakia) != -1:
+		zenbakia = input("Sartu zenbaki bat(-1 irtetzeko): ")
+		if int(zenbakia) != -1:
+			lista1.append(zenbakia)
+
+	ausazkoZenbakia = random.randrange(0, len(lista1))
+	print("Ausazko zenbakia: " + str(lista1[ausazkoZenbakia]))
+
+#26.ariketa
+def zerrendakoHiruZenbakiTxikienak():
+	zenbakia = "0"
+	lista1 = []
+	while int(zenbakia) != -1:
+		zenbakia = input("Sartu zenbaki bat(-1 irtetzeko): ")
+		if int(zenbakia) != -1:
+			lista1.append(zenbakia)
+
+	for i in range(0,len(lista1)):
+		for j in range(0, len(lista1)-1):
+			if int(lista1[j+1]) < int(lista1[j]):
+				temp = lista1[j+1]
+				lista1[j+1] = lista1[j]
+				lista1[j] = temp
+
+	for i in range(3):
+		print(str(i) + ".zenbakia: " + str(lista1[i]))
+
+zerrendakoHiruZenbakiTxikienak()
