@@ -1,0 +1,10 @@
+def hiruZenbaki():
+	lista1 = []
+	for i in range(0,3):
+		zenbakia = input("Sartu " + str(i) + ".zenbakia: ")
+		lista1.append(int(zenbakia))
+	batuketa = 0
+	for i in lista1:
+		batuketa += i
+	emaitza = batuketa / 3
+	print(str(lista1[0]) + "," + str(lista1[1]) + "," + str(lista1[2]) + " zenbakien bataz bestekoa: " + str(emaitza))

@@ -1,18 +1,12 @@
 ##1.ariketa
 def multiploak():
 	lista5 = []
-	lista7 = []
 	for i in range(1500,2700):
-		if i % 5 == 0:
+		if i % 5 == 0 and i % 7 == 0:
 			##print("5en multiploa: " + str(i))
 			lista5.append(i)
-		elif i % 7 == 0:
-			##print("7ren multiploa: " + str(i))
-			lista7.append(i)
 	print("5en multiploak: ")
 	print(lista5)
-	print("7ren multiploak: ")
-	print(lista7)
 
 ##2.ariketa
 def celsiusFahrenheit():
@@ -184,6 +178,19 @@ def batazBestekoa():
 	emaitza = (int(z1) + int(z2) + int(z3)) / 3
 	print("Bataz bestekoa: " + str(emaitza))
 
+'''
+def hiruZenbaki():
+	lista1 = []
+	for i in range(0, 3):
+		zenbakia = input("Sartu " + str(i) + ".zenbakia: ")
+		lista1.append(int(zenbakia))
+	batuketa = 0
+	for i in lista1:
+		batuketa += i
+	emaitza = batuketa / 3
+	print(str(lista1[0]) + "," + str(lista1[1]) + "," + str(lista1[2]) + " zenbakien bataz bestekoa: " + str(emaitza))
+'''
+
 #16.ariketa
 def listarenBatuketa():
 	zenbakia = "0"
@@ -239,20 +246,26 @@ def zenbakiTxikiena():
 	print("Listako zenbaki txikiena: " + str(zenbakiTxikiena))
 
 #20.ariketa
-def zenbakiErrepikatuak(): ##Sin acabar
+def zenbakiErrepikatuak():
 	zenbakia = "0"
 	lista1 = []
-
+	lista2 = []
 	while int(zenbakia) != -1:
 		zenbakia = input("Sartu zenbaki bat(-1 amaitzeko): ")
 		if int(zenbakia) != -1:
 			lista1.append(int(zenbakia))
 	print("Lista zenbakiak ezabatu aurretik:")
 	print(lista1)
-
+	for i in lista1:
+		errepikatuta = False
+		for j in lista2:
+			if i == j:
+				errepikatuta = True
+		if errepikatuta == False:
+			lista2.append(i)
 
 	print("Lista zenbakiak ezabatu ondoren")
-	print(lista1)
+	print(lista2)
 
 #21.ariketa
 def zerrendaHutsik():
@@ -339,4 +352,29 @@ def zerrendakoHiruZenbakiTxikienak():
 	for i in range(3):
 		print(str(i) + ".zenbakia: " + str(lista1[i]))
 
-zerrendakoHiruZenbakiTxikienak()
+def txtIrakurri():
+	with open('adibidea.txt') as f:
+		lerroak = f.readlines()
+
+		lerroKopurua = 0
+		for i in lerroak:
+			lerroKopurua += 1
+
+		print("Lerro kopurua: " + str(lerroKopurua))
+
+		lerroKopurua = 0
+		for i in lerroak:
+			lerroKopurua +=1
+			karaktereKopurua = len(i) - i.count(" ")
+			print(str(lerroKopurua) + ".lerroa: " + str(karaktereKopurua))
+
+		aKopurua = 0
+		for i in lerroak:
+			aKopurua += i.count("a")
+			aKopurua += i.count("A")
+
+		print("A kopurua: " + str(aKopurua))
+
+
+txtIrakurri()
+
