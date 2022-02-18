@@ -40,7 +40,7 @@ def asteriskoakInprimatu():
 
 ##4.ariketa
 def zerrendakoBikoitiak():
-	zerrenda = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+	zerrenda = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	bakoitiak = 0
 	bikoitiak = 0
 	for i in range(0, len(zerrenda)):
@@ -48,7 +48,7 @@ def zerrendakoBikoitiak():
 			bikoitiak += 1
 		else:
 			bakoitiak += 1
-	print("Zenbaki bikotiti kopurua: " + str(bikoitiak))
+	print("Zenbaki bikoiti kopurua: " + str(bikoitiak))
 	print("Zenbaki bakoiti kopurua: " + str(bakoitiak))
 
 #5.ariketa
@@ -93,7 +93,7 @@ def digituKopurua():
 			letrak += 1
 	print("Letrak: " + str(letrak))
 	print("Digituak: " + str(digituak))
-
+'''
 #7.ariketa
 def aLetraInprimatu():
 	for i in range(0,7):
@@ -103,6 +103,20 @@ def aLetraInprimatu():
 			print("*****")
 		else:
 			print("*   *")
+			
+'''
+def aLetraInprimatu():
+	for i in range(0,7):
+		for j in range(0,5):
+			if i == 0 and (j == 1 or j == 2 or j == 3):
+				print("*",end="")
+			elif  (i == 1 or i == 2 or i > 3) and (j == 0 or j == 4):
+				print("*",end="")
+			elif i == 3:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print()
 
 #8.ariketa
 def kontsonanteaDa():
@@ -157,6 +171,12 @@ def esaldiaAlderantziz():
 	esaldia = input("Sartu esaldi bat: ")
 	for i in range(len(esaldia)-1,-1,-1):
 		print(esaldia[i], end="")
+'''
+def esaldiaAlderantziz():
+	esaldia = input("Sartu esaldi bat: ")
+	for i in reversed(esaldia):
+		print(i, end="")
+'''
 
 #14.ariketa
 def digituBakoitiak():
@@ -376,5 +396,5 @@ def txtIrakurri():
 		print("A kopurua: " + str(aKopurua))
 
 
-txtIrakurri()
+
 
