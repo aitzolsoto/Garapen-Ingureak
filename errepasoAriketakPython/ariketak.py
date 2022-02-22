@@ -395,6 +395,71 @@ def txtIrakurri():
 
 		print("A kopurua: " + str(aKopurua))
 
+def triangeluaAlderantziz():
+	tamaina = input("Sartu tamaina: ")
+	for i in range(0,int(tamaina)):
+		for j in range(int(tamaina)):
+			if j >= i:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		for j in range(int(tamaina)-1):
+			if i + j < int(tamaina)-1:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print("")
+
+def erronboa():
+	tamaina = input("Sartu tamaina: ")
+	for i in range(int(tamaina)):
+		for j in range(int(tamaina)):
+			if i + j >= int(tamaina)-1:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		for j in range(int(tamaina)-1):
+			if j < i:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print("")
+
+	for i in range(1,int(tamaina)):
+		for j in range(int(tamaina)):
+			if j >= i:
+				print("*",end="")
+			else:
+				print(" ",end="")
+
+		for j in range(int(tamaina)-1):
+			if i + j <= int(tamaina)-1:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print("")
+
+def triangeluErdia():
+	tamaina = input("Sartu tamaina: ")
+	for i in range(int(tamaina)):
+		for j in range(int(tamaina)):
+			if j <= i:
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print("")
+	for i in range(1,int(tamaina)):
+		for j in range(int(tamaina)):
+			if i + j < int(tamaina):
+				print("*",end="")
+			else:
+				print(" ",end="")
+		print("")
+
+
+
+
+
 
 
 
